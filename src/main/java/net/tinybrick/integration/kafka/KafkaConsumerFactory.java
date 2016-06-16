@@ -1,11 +1,11 @@
-package com.wang.integration.kafka;
+package net.tinybrick.integration.kafka;
 
 import java.util.Properties;
 
-import com.wang.integration.kafka.event.KafkaMessageHandler.KafkaMessageEvent;
-import com.wang.integration.message.IMessageConsumer;
-import com.wang.integration.message.IMessageConsumerFactory;
-import com.wang.integration.message.MessageEventListener;
+import net.tinybrick.integration.kafka.event.KafkaMessageHandler.KafkaMessageEvent;
+import net.tinybrick.integration.message.IMessageConsumer;
+import net.tinybrick.integration.message.IMessageConsumerFactory;
+import net.tinybrick.integration.message.MessageEventListener;
 
 public class KafkaConsumerFactory implements IMessageConsumerFactory<KafkaMessageEvent> {
 	Properties producerProps;

@@ -1,10 +1,10 @@
-package com.wang.integration.kafka;
+package net.tinybrick.integration.kafka;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
-import com.wang.integration.message.IMessageProducer;
+import net.tinybrick.integration.message.IMessageProducer;
 
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;

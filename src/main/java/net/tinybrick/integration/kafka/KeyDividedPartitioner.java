@@ -1,4 +1,4 @@
-package com.wang.integration.kafka;
+package net.tinybrick.integration.kafka;
 
 import kafka.producer.DefaultPartitioner;
 import kafka.producer.Partitioner;

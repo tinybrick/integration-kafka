@@ -1,9 +1,9 @@
-package com.wang.integration.kafka;
+package net.tinybrick.integration.kafka;
 
 import java.util.Properties;
 
-import com.wang.integration.message.IMessageProducer;
-import com.wang.integration.message.IMessageProducerFactory;
+import net.tinybrick.integration.message.IMessageProducer;
+import net.tinybrick.integration.message.IMessageProducerFactory;
 
 public class KafkaProducerFactory implements IMessageProducerFactory {
 	Properties producerProps;

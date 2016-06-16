@@ -1,9 +1,12 @@
-package com.wang.integration.message.configuration;
+package net.tinybrick.integration.message.configuration;
 
 import java.util.Properties;
 
 import kafka.serializer.StringEncoder;
 
+import net.tinybrick.integration.kafka.KafkaConsumerFactory;
+import net.tinybrick.integration.kafka.KeyDividedPartitioner;
+import net.tinybrick.integration.kafka.event.KafkaMessageHandler;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -12,12 +15,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
-import com.wang.integration.kafka.KafkaConsumerFactory;
-import com.wang.integration.kafka.KafkaProducerFactory;
-import com.wang.integration.kafka.KeyDividedPartitioner;
-import com.wang.integration.kafka.event.KafkaMessageHandler.KafkaMessageEvent;
-import com.wang.integration.message.IMessageConsumerFactory;
-import com.wang.integration.message.IMessageProducerFactory;
+import net.tinybrick.integration.kafka.KafkaProducerFactory;
+import net.tinybrick.integration.message.IMessageConsumerFactory;
+import net.tinybrick.integration.message.IMessageProducerFactory;
 
 @Configuration
 @ComponentScan
@@ -34,7 +34,7 @@ public class KafkaConfigure {
 	private static final String zk_autocommit_interval_ms = "1000";
 
 	@Bean
-	public IMessageConsumerFactory<KafkaMessageEvent> kafkaConsumerFactory() {
+	public IMessageConsumerFactory<KafkaMessageHandler.KafkaMessageEvent> kafkaConsumerFactory() {
 		Properties consumerProps = new Properties();
 		consumerProps.put("zookeeper.connect", zookeeper_connection);
 		consumerProps.put("zookeeper.session.timeout.ms", zk_sessiontimeout_ms);

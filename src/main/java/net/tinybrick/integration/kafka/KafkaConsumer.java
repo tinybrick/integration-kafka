@@ -1,4 +1,4 @@
-package com.wang.integration.kafka;
+package net.tinybrick.integration.kafka;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,10 +18,10 @@ import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
 import kafka.message.MessageAndMetadata;
 
+import net.tinybrick.integration.message.IMessageConsumer;
 import org.apache.log4j.Logger;
 
-import com.wang.integration.kafka.event.KafkaMessageHandler;
-import com.wang.integration.message.IMessageConsumer;
+import net.tinybrick.integration.kafka.event.KafkaMessageHandler;
 
 public class KafkaConsumer extends KafkaMessageHandler implements IMessageConsumer {
 	Logger logger = Logger.getLogger(this.getClass());

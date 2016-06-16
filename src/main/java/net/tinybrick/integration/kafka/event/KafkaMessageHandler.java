@@ -1,11 +1,11 @@
-package com.wang.integration.kafka.event;
+package net.tinybrick.integration.kafka.event;
 
 import java.util.Collection;
 import java.util.EventObject;
 import java.util.HashSet;
 import java.util.Iterator;
 
-import com.wang.integration.message.MessageEventListener;
+import net.tinybrick.integration.message.MessageEventListener;
 
 import kafka.message.MessageAndMetadata;
 

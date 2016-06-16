@@ -1,4 +1,4 @@
-package com.wang.integration.message;
+package net.tinybrick.integration.message;
 
 import java.util.EventListener;
 
